@@ -1,0 +1,15 @@
+<h3>Search for Gifs</h3>
+<h3>You have been here for {{time}} seconds</h3>
+<div class="flex-row">
+    <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="search" placeholder="Search">
+    </mat-form-field>
+    <button (click)="searchGifs()" mat-raised-button class="button" color="primary">Search</button>
+</div>
+<div class="flex-row">
+    <div class="img-container" *ngFor = "let gif of gifs">
+        <h3 class="text-center">{(gif.title)}</h3>
+        <img [src]="gif.url">
+    </div>
+</div>
